@@ -82,7 +82,7 @@
 
 ---
 
-# Malzeme Ana Verileri - Master Data 
+# :medal_sports: Malzeme Ana Verileri - Master Data 
 
 + Malzeme ana verileri, bir şirketin malzemeye ilişkin bilgilerinin bulunduğu en önemli veri kaynağıdır.
 
@@ -93,11 +93,11 @@
 + SAP sisteminde **malzeme** **MM01** işlem kodu ile yaratılır.
 
 
-## Malzeme Ana Verisi - Sektör 
+## :ledger: Malzeme Ana Verisi - Sektör 
 
 + Malzemenin sektöre tayin edilmesi, ekranları, ekranlarla ilgili sonuçları ve ekranlardaki sektöre özgü alanların gösterilmesine yardımcı olur.
 
-## Malzeme Ana Verisi - Malzeme Türü 
+## :ledger: Malzeme Ana Verisi - Malzeme Türü 
 
 + Malzeme türü, malzeme stoklarının nasıl yönetileceğini, miktar değişikliklerinin malzeme ana verilerinde mi yoksa değer değişiklikleri olarak mali muhasebedeki stok hesaplarında mı güncelleneceğini belirler.
 
@@ -107,7 +107,7 @@
 
 + **Malzeme türleri (SPRO)**, **OMS2** işlem kodundan tanımlanabilir.
 
-## Malzeme Görünümleri 
+## :ledger: Malzeme Görünümleri 
 
 + Malzeme, tüm sistem içerisinde tek bir tanımlama içerir fakat organizasyon yapısı düzeyinde (örn. üretim yeri) farklı parametre değerlerine sahip olabilir.
 
@@ -119,35 +119,35 @@
   + **İş Planlaması**
   + **Tahmin**
 
-### Temel Veriler
+### :mag: Temel Veriler
 
 + Malzeme ana verisi temel veriler (1-2) görünümleri, malzemenin üst birimi (tüm şirketler) düzeyinde tanımlanır.
 
 + Bu veriler, malzemeyi tanımlayıcı veriler (hacim, ebat, ağırlık vb.) ve malzemeye ilişkin çeşitli kriterler (mal grubu, bölüm vb.) içermektedir. 
 
-### Temel Ölçü Birimi 
+### :mag: Temel Ölçü Birimi 
 
 + Malzeme için bir **temel ölçü birimi** seçilir.
 
 + Bu ürün ağacı taban miktarının ölçü birimi olan, stokların tutulacağı ve maliyetlerin hesaplanacağı bir ölçü birimidir.
 
-### Mal Grubu (Material Group) 
+### :mag: Mal Grubu (Material Group) 
 
 + Malzemeleri benzer özelliklerine, kullanım amaçlarına veya tedarik türlerine göre gruplandırmak için kullanılır.
 
-### Harici Mal Grubu (External Material Group) 
+### :mag: Harici Mal Grubu (External Material Group) 
 
 + Şirket içi kullanılan "Mal Grubu" alanından bağımsız olarak, dış kaynaklı (genellikle tedarikçilerin veya uluslararası standartların) gruplandırma kodlarını girmek için kullanılır.
 
 + Tedarikçilerle ortak bir dil konuşmak veya malzemenizi uluslararası bir sınıflandırma koduna (örneğin ECLASS veya UNSPSC) göre etiketlemek istenildiğinde kullanılır.
 
-### Eski Malzeme No (Old Material Number)
+### :mag: Eski Malzeme No (Old Material Number)
 
 + Şirketin SAP sistemine geçmeden önce kullandığı eski sistemdeki (legacy system) malzeme numarasının kaydedildiği alandır.
 
 + Özellikle sistem geçiş süreçlerinde (Go-live sonrası), kullanıcıların eski numaralarla arama yaparak malzemeyi bulmalarını kolaylaştırır. Tamamen bilgi amaçlıdır.
 
-### Bölüm (Division)
+### :mag: Bölüm (Division)
 
 + Malzemenin ait olduğu ürün hattını veya iş birimini temsil eder.
 
@@ -155,7 +155,7 @@
 
 + Satış analizleri yapmak ve belirli bir ürün grubuna (bölüme) özel fiyatlandırma veya satış stratejileri belirlemek için kullanılır.
 
-## MİP Görünümleri
+## :ledger: MİP Görünümleri
 
 + MİP görünümü bir malzemenin tedarik şeklini, planlama yönetimini ve üretim süreci içinde bu malzemenin kontrol edilmesi için nasıl tanımlanacağını içerir.
 
@@ -165,7 +165,7 @@
 
 + Mip karakteristiği bir malzemenin talebe dayalı ya da tüketim bazlı (örn. yeniden sipariş seviyesi ile planlama) olarak planlamanın olup olmayacağını gösterir.
 
-### MİP1 - Genel Veriler
+### :mag: MİP1 - Genel Veriler
 
 + Malzeme ana verisi; MİP1 görünümü malzeme ihtiyaç planlama şeklini, parti büyüklüğünü, mip sorumlusu ve malzeme ihtiyaç planlamasına yön veren parametrelerin gruplandığı mip grubu verilerini içermektedir.
 
@@ -180,7 +180,7 @@
 
 ---
 
-### MİP1 - MİP Yöntemi 
+### :mag: MİP1 - MİP Yöntemi 
 
 | Alan Adı | Kullanım | Değer | 
 | :--- | :--- | :--- |
@@ -192,7 +192,7 @@
 
 ---
 
-### MİP1 - Parti Büyüklüğü Verileri 
+### :mag: MİP1 - Parti Büyüklüğü Verileri 
 
 | Alan Adı | Kullanım | Değer |
 | :---- | :---- | :--- |
@@ -211,9 +211,78 @@
 
 ---
 
-### MİP2 - Tedarik 
+### :mag: MİP2 - Tedarik 
 
 + MİP2 Görünümü genellikle malzemenin tedarik şeklini, terminlemeye etki eden değerleri ve emniyet stoğu ile ilgili parametreleri içerir.
+
+| Alan | Kullanım | Değer | 
+| :--- | :--- | :--- |
+| Tedarik Türü | Malzemenin dahili mi üretileceği yoksa dışarıdan mı tedarik edileceği tanımlanır. | **E:** Dahili üretim <br> **F:** Dışarıdan tedarik <br> **():** Tedarik yok <br> **X:** Her iki tedarik türü de |
+| Özel Tedarik | Malzemenin tedarik türünü daha detaylı olarak belirtmek için bu veri alanı kullanılır. Özel tedarik alanı, tedarik türü alanının etkinliğini kaldırır. | **10:** Konsinye <br> **20:** Dışarıdan tedarik <br> **30:** Fason üretim <br> **40:** Stok nakli <br> **50:** Yapay bileşen grubu <br> **52:** Doğrudan üretim / sipariş ağı <br> **60:** Yapay (ön planlama) <br> **70:** Başka üretim yerinden çekme <br> **80:** Başka üretim yerinde üretim |
+| Kotalama kullanımı | Malzemenin hangi seviyelerinde (satınalma talebi, planlı sipariş vb.) kotalama kullanılacağının belirtildiği alandır. | | 
+| Teyit sonrası otomatik çekme | Üretim gerçekleştirildiği (teyit verildiği sırada) kullanılan malzemelerin depolardan otomatik olarak çekilmesini (sarf edilmesini) sağlar. | **1:** Her zaman üretim sonrası otomatik çekme <br> **2:** Üretim sonrası otomatik çekme kararını iş yeri verir |
+| Parti Girişi | Bileşenler için parti belirleme işleminin ne zaman yapılacağını gösteren alandır. <br> Üretim siparişi onay sırasında otomatik belirlenmesi sağlanabilmektedir. | **0:** Mal çıkışı sırasında parti, teyit gerekli değil <br> **1:** Sipariş onayı sırasında manuel parti belirleme gerekir <br> **2:** Üretim/proses siparişinde parti gerekli değil; teyit gerekir <br> **3:** Sipariş onayı sırasında değişen otomatik parti belirleme | 
+| Üretim Depo Yeri | Bileşenler için malzemenin tüketiminin yapılacağı depo yeri, yarı mamul ve mamuller için üretilip depoya konulacağı depo yeri anlamına gelmektedir. |  | 
+| Önerilan ÜTA | Malzemenin öncelikli olarak nereden tedarik edileceğinin belirttiği alandır. | | 
+| Dışarıdan tedarik depo yeri | Dışarıdan tedarik edilen malzemelerin stok girişinin yapılacağı depo yeridir. | | 
+| Stok belirleme grubu | Depo yerinin belirlenmesi için çeşitli kuralları içerir. | | 
+| Eş Ürün | Üretim süreçleri sonucunda birden çok malzeme üretildiği durumda eş ürün tanımlaması yapılır. <br> Örn: A4 üretilirken kağıdın gerekli kısmı kullanıldı ve kalan kısmı da değerli bir ürün yapmak için kullanıldı. | | 
+| Dökme Ürün | Net ihtiyaç planlaması dahil edilmeyen, planlaması tüketim esasına göre yapılan miktarı önemsiz malzemeler için tanımlanır. <br> Hiç bitmeyecekmiş gibi davranılır. | | 
+
+--- 
+
+### :mag: MİP2 - Terminleme 
+
+| Alan | Kullanım | Değer | 
+| :--- | :--- | :--- |
+| Dahili Üretim Süresi | Bir malzemeyi üretmek için gereken süre tanımlanır. <br> Girilen süre üretim büyüklüğünden bağımsızdır. <br> Mip terminleme parametresi "1" seçilirse dikkate alınır. | | 
+| Planlı teslimat süresi | Dışarıdan tedarik edilecek bir malzemenin iş günü üzerinden tedarik edileceği süredir. | | 
+| MG işleme süresi | Malzeme tedarikinin planlanan bitiş süresinden, malzemenin kullanılabilir hale gelene kadarki süreyi temsil eder. <br> Örn: Malzeme 12 günde üretildi, aktif hale gelmesi için 2 gün daha lazım.| |
+| Süre Anahtarı | Tampon zamanları belirlemek için girilen alandır. Kullanılabilecekler: <br> Açılış Süresi, <br> Emniyet Süresi, <br> Üretim Öncesi Tampon Zaman, <br> Onay Süresi. | Süre anahtarı '000' da herhangi bir tampon süre yoktur. | 
+| Planlama takvimi | Planlamanın yapılması istenen dönemleri içeren takvim atanır. | Parti büyüklüğü - PK değeri seçilmişse kullanılır. | 
+
+---
+
+### :mag: MİP2 - Net İhtiyaç Planlaması 
+
+| Alan Adı | Kullanım | Değer | 
+| :--- | :--- | :--- | 
+| Emniyet Stoğu | Depoda sürekli tutulmak istenen stok miktarıdır. | | 
+| Asgari Emniyet Stoğu | Otomatik hesaplanan emniyet stoğunun altına düşülemeyeceği miktarıdır. | |
+| İhtiyaç Ön Süresi | İhtiyaç ön süresinin sadece birincil ihtiyaçlar için mi tüm ihtiyaçlar için mi kullanılacağını belirleyen göstergedir. | | 
+| İhtiyaç Ön Süresi (iş günü) | Malzemenin ihtiyaçlarının öne çekilmek istendiği gün sayısı girilir. | | 
+| İhtiyaç Ön Süresi Dönem Profili | İhtiyaç ön süresi için başlangıç ve bitiş tarihlerini içeren profil tayin edilir. | |
+| Teslim edilebilirlik derecesi (%) | Hizmet düzeyi olarak otomatik emniyet stoğu hesaplamasında dikkate alınır. Malzemenin ihtiyacının karşılanabilme yüzdesidir. | |
+| Yeterlilik Profili | Dinamik olarak ihtiyaca göre emniyet stoğu hesaplanmasını sağlar. <br> Dinamik emniyet stoğu ortalama günlük ihtiyaçlar temel alınarak hesaplanan istatistiksel bir hesaplamadır. | | 
+
+--- 
+
+### :mag: MİP3 - Tahmini İhtiyaçlar 
+
++ MİP3 görünümü genellikle ön planlama stratejisi, mahsuplaşma tipi ve aralığı, kullanılabilirlik kontrolü parametrelerini içermektedir.
+
+| Alan Adı | Kullanım | Değer | 
+| :--- | :--- | :--- |
+| Dönem göstergesi | Tüketim değerlerinin hangi dönem bölümlemesi ile güncelleneceğini belirler. | **M:** Aylık <br> **W:** Haftalık <br> **T:** Günlük | 
+| Mali yıl varyantı | Mali yılı tanımlayan mali yıl varyantı girilir. <br> Mali yıl içerisinde ne kadar kayıt dönemi olacağı belirtilir. | | 
+| Dağıtım Göstergesi | Tahmine dayalı mip yöntemi ve periyot uzunluğu 'Gün' olmayan tahminlerin nasıl dağıtılacağı belirtilir. | | 
+
+---
+
+### :mag: MİP3 - Ön Planlama 
+
+| Alan Adı | Kullanım | Değer | 
+| :--- | :--- | :--- |
+| Strateji Grubu | Planlama stratejisini (sipariş üzerine üretim/stoğa üretim) belirtir. <br> Planlanmış ihtiyaçların ve müşteri ihtiyaçlarının mahsuplaşmasını denetler. <br> Firmanın üretim tipine, stok yapısına ve de satış politikasına uygun grup ya da gruplar seçilerek planlamaya ve üretime yön verilir. | **10:** Depoya Üretim <br> **11:** Depoya üretim/brüt planlama <br> **20:** Sipariş üzerine üretim <br> **30:** Parti büyüklüğüne göre üretim <br> **40:** Son montaj ile ön planlama <br> **50:** Son montajsız ön planlama <br> **81:** Üretim siparişleri ile montaj işlemleri | 
+| Mahsuplaştırma Kipi | Hangi zaman aralığında planlı birincil ihtiyaçlar, satış siparişleri, ikincil ihtiyaçlar ve rezervasyonlar tarafından tüketileceğini belirler. | **1:** Yalnızca geriye dönük mahsuplaştırma <br> **2:** Geriye ve ileriye dönük mahsuplaştırma <br> **3:** Yalnızca ileriye dönük mahsuplaştırma <br> **4:** Geriye ve ileriye dönük mahsuplaştırma | 
+| Tüketim arl. ileriye | Birincil ihtiyaçların ileriye doğru kaç günlük dönem içerisinde satış siparişlerine mahsuplaşacağı bilgisidir. |  | 
+| Mhsp. arl. geriye | Birincil ihtiyaçların geriye doğru kaç günlük dönem içerisinde satış siparişlerine mahsuplaşacağı bilgisidir. | | 
+| Karma MİP | Planlama stratejisinin brüt planlama ve son montajsız bileşen grubu ön planlaması olarak kullanılması durumunda kullanılacaktır. | **1:** Son montaj ile bileşen grubu ön planlaması <br> **2:** Brüt planlama <br> **3:** Son montajsız bileşen grubu ön planlaması | 
+| Ön Planlama Malzemesi | Planlama malzemesi ile planlama stratejisi kullanıldığında geçerlidir. Malzemeye ait satış siparişi ön planlama malzemesinin ihtiyacını tüketmektedir. | | 
+| Planlama Üretim Yeri | Planlama malzemesi ile planlama stratejisi kullanıldığında geçerlidir. Referans alınan malzemenin hangi üretim yerinden alındığını gösterir. | 
+| Dönüştürme Faktörü | Malzemenin TÖB ile planlama malzemesinin ölçü birimi arasında dönüşümü sağlayan oran belirtilir. | | 
+| Ön pln. mlz. temel öb. | Ön planlama malzemesinin ölçü birimi girilir. | | 
+
 
 
 
