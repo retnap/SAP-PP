@@ -155,5 +155,80 @@
 
 + Satış analizleri yapmak ve belirli bir ürün grubuna (bölüme) özel fiyatlandırma veya satış stratejileri belirlemek için kullanılır.
 
+## MİP Görünümleri
+
++ MİP görünümü bir malzemenin tedarik şeklini, planlama yönetimini ve üretim süreci içinde bu malzemenin kontrol edilmesi için nasıl tanımlanacağını içerir.
+
++ Tedarik türü, malzemenin dışarıdan tedarik veya dahili üretilecek ya da her iki senaryonun mümkün olduğunu belirtir. 
+
++ Mip sorumlusu ile belirli bir malzeme için **planlama sorumlusu** tanımlanır.
+
++ Mip karakteristiği bir malzemenin talebe dayalı ya da tüketim bazlı (örn. yeniden sipariş seviyesi ile planlama) olarak planlamanın olup olmayacağını gösterir.
+
+### MİP1 - Genel Veriler
+
++ Malzeme ana verisi; MİP1 görünümü malzeme ihtiyaç planlama şeklini, parti büyüklüğünü, mip sorumlusu ve malzeme ihtiyaç planlamasına yön veren parametrelerin gruplandığı mip grubu verilerini içermektedir.
+
+| Alan Adı | Kullanım | Değer |
+| --- | --- | --- |
+| Temel Ölçü Birimi | Malzemenin stok tutulan ölçü birimini temsil eder. | | 
+| Satınalma grubu | Satınalma aktivitesini gerçekleştiren kişi veya grubu temsil eder. | | 
+| Ü.Y'ye özgü mlz. durumu | Malzemenin kullanılabilirliğini sınırlamak üzere kullanılır. Satınalma, ürün ağacı, iş planı, üretim vb. ana veri ve işlevlerin kullanımı sınırlandırılır. | 01: Tedarik/Planlama için Bloke <br> 02: Tedarik/Planlama/Stok için Bloke | 
+| MİP Grubu | Üretim planlaması ve malzeme planlamasına ilişkin değerlerin toplu halde tanımlandığı alandır. | 0000: Dışarıdan tedarik <br> 0001: Ön planlamasız dahili üretim <br> 0002: Ön planlamalı dahili üretim | 
+| ABC göstergesi | Malzemeyi ABC analizine göre gruplandırmak için kullanılır. | A: Önemli malzeme <br> B: Orta derecede önemli malzeme <br> C: Önemi az olan malzeme | 
+| ÜY. özgü mlz. durumu için gçrl. başlangıcı | Üretim yerine özgü malzeme durumu için geçerlilik başlangıç tarihi girilir |  | 
+
+---
+
+### MİP1 - MİP Yöntemi 
+
+| Alan Adı | Kullanım | Değer | 
+| :--- | :--- | :--- |
+| MİP Karakteristiği | Malzeme ihtiyaç planlamasının yapılıp yapılmayacağı, yapılacaksa da yönetimini (plana dayalı/tüketime dayalı) denetler. <br> **Plana dayalı planlama** yönteminde tahmin veya satış belgesine istinaden gerçekleşen bir üretim planına girdi ve çıktıların dikkate alındığı planlama yöntemidir. <br> **Tüketime dayalı planlama** yönteminde stok seviyesinin belirli bir düzeyin altına düştüğünde tedarik önerisinin bu seviyeye ulaşacak şekilde önerilmesi veya tamamen tahmin verisine dayalı olarak gerçekleştirebilmektedir. | **PD:** Plana Dayalı <br> **ND:** Mip Yok <br> **VM:** Otomatik yeniden sipariş seviyesi ile planlama <br> **VB:** Manuel yeniden sipariş seviyesi ile planlama <br> **VV:** Tahmine dayalı Mip | 
+| MİP Sorumlusu | Planlama çalışmaları ve raporlamalarda kullanılmak üzere sorumlu kişiler tanımlanır. | 001: Person | 
+| Yeniden sipariş seviyesi | MİP Karakteristiği tüketime dayalı olan malzemeler için tedarik önerisi oluşturulacak seviyeyi temsil eder. Eğer düşerse sistem malzemeyi bir sonraki planlama için işaretleyecektir. | |
+| Sabitleme Süresi | MİP'in sabit olarak kabul edeceği aralıktır. | | 
+| Planlama Sıklığı | Planlamanın ve siparişin hangi gün yapılacağını belirten alandır. | | 
+
+---
+
+### MİP1 - Parti Büyüklüğü Verileri 
+
+| Alan Adı | Kullanım | Değer |
+| :---- | :---- | :--- |
+| MİP Parti Büyüklüğü | Üretimi veya tedariği yapılacak malzemelerin parti büyüklüğünün nasıl hesaplanacağı tanımlanır. | **FX:** Sabit parti büyüklüğü <br> **EX:** İhtiyaca göre parti büyüklüğü <br> **WB:** Haftalık parti büyüklüğü <br> **MB:** Aylık parti büyüklüğü <br> **TB:** Günlük parti büyüklüğü <br> **PK:** Planlama takvimine göre parti büyüklüğü | 
+| Sabit Parti Büyüklüğü | Malzemelerin her zaman belirli miktarda tedarik edildiği durumlarda kullanılır. | FX | 
+| Asgari Parti Büyüklüğü | Tedarik önerisi miktarının minimum değerini belirtir. | | 
+| Azami Parti Büyüklüğü | Tedarik önerisi miktarının azami değerini belirtir. Bu değerin üzerine çıkılmasına izin verilmez. |  | 
+| Azami Stok | Bir malzemenini ulaşabileceği en fazla miktar olarak tanımlanır. | HB seviyesinde değer girilir. |
+| Yuvarlama Değeri | Belirli miktar ve katlarında tedarik önerilerinin oluşturulmasını sağlar. | | 
+| Yuvarlama Profili | Sipariş miktarlarını tedarik edilebilir miktarlara yuvarlamak için kullanılan alandır. | | 
+| Bileşen Grubu Iskartası | Üretim esnasındaki montaj ıskartasını temsil eder. <br> Yüzde olarak tanımlanır ve üretilecek malzeme ile birlikte bileşen miktarını da artırır. | 
+| Takt Zamanı | Birden çok tedarik önerisinin oluştuğu durumda, tedarik önerileri arası geçiş süresi olarak tanımlanır. <br> Malzeme ihtiyacı kapasite problemlerinden dolayı tek seferde karşılanamıyor ise tedarik aralığını gösteren alandır. | |
+| Parti büyüklüğü sabit masrafı | MİP parti büyüklüğünde optimum parti büyüklüğü belirleme yöntemleri kullanılırsa girilecektir. <br> Sipariş oluşturma sabit maliyetidir. | | 
+| Depo masrafları göstergesi | MİP parti büyüklüğünde optimum parti büyüklüğü belirleme yöntemleri kullanılırsa girilecektir. <br> Stok tutma maliyetinin belirlenmesinde kullanılır. | | 
+| Ölçü birimleri grubu | Farklı ölçü birimlerinin gruplandığı alandır. | | 
+
+---
+
+### MİP2 - Tedarik 
+
++ MİP2 Görünümü genellikle malzemenin tedarik şeklini, terminlemeye etki eden değerleri ve emniyet stoğu ile ilgili parametreleri içerir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
