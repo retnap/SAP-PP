@@ -304,7 +304,7 @@
 
 --- 
 
-### MİP4 - Ürün Ağacı Açılımı / İkincil İhtiyaçlar 
+### :mag: MİP4 - Ürün Ağacı Açılımı / İkincil İhtiyaçlar 
 
 + MİP4 görünümü genellikle ürün ağacı/iş planı açılım şeklini, bağımlı ihtiyaçların aktarım şeklini (MTO/MTS), kesinti verilerini, seri üretim ve depo yeri ayrı planlaması durumunda tanımlanacak değerleri içermektedir.
 
@@ -319,7 +319,7 @@
 
 --- 
 
-### MİP4 - Kesinti Denetimi 
+### :mag: MİP4 - Kesinti Denetimi 
 
 | Alan Adı | Kullanım | Değer | 
 | :--- | :--- | :--- |
@@ -329,7 +329,7 @@
 
 ---
 
-### MİP4 - Seri Üretim / Montaj / Yayılma Stratejisi 
+### :mag: MİP4 - Seri Üretim / Montaj / Yayılma Stratejisi 
 
 | Alan Adı | Kullanım | Değer | 
 | :--- | :--- | :--- |
@@ -343,7 +343,7 @@
 
 ---
 
-### MİP4 - Depo Yeri Planlaması 
+### :mag: MİP4 - Depo Yeri Planlaması 
 
 | Alan Adı | Kullanım | Değer | 
 | :--- | :--- | :--- |
@@ -351,6 +351,120 @@
 | DY Özel Tedarik Türü | Depo yeri bazında özel tedarik türünün belirlendiği alandır. | |
 | Yeniden Sipariş Seviyesi | Depo yeri bazında yeniden sipariş seviyesinin belirlendiği alandır. | | 
 | İkmal Miktarı | Depo yeri bazında tedarik miktarının belirlendiği alandır. | | 
+
+--- 
+
+## :ledger: İş Planlaması Görünümü
+
++ İş Planlaması görünümü, üretim yürütümü ile ilgili verilen girilmesini sağlar.
+
++ Bu görünümde, miktar bağımlı dahili üretim süresi içerisinde bulunan kurulum süresi, geçiş süresi ve işleme zaman olarak belirtilir.
+
++ Malzemelerin parti ile yönetilmesi gerekiyorsa işaretlenebilir ayrıca izin verilen tolerans değerleri belirtilebilir.
+
+### :mag: İş Planlaması - Genel Veriler
+
+| Alan Adı | Kullanım | Değer | 
+| :--- | :--- | :--- |
+| Temel Ölçü Birimi | Malzemenin stok tutulan ölçü birimini temsil eder. | | 
+| Üretim Ölçü Birimi | Üretimde kullanılan ölçü birimini ifade eder. | | 
+| Çıkış Ölçü Birimi | Malzemenin tüketim yapılacağı ölçü birimi tayin edilir. | |  
+| ÜY'ye Özgü Mlz. Durumu | Malzemenin kullanılabilirliğini sınırlamak üzere kullanılır. | | 
+| ÜY'ye Özgü Mlz. Durumu için Gçrl. Başlangıcı | Üretim yerine özgü malzeme durumu için geçerlilik başlangıç tarihi girilir. | | 
+| Üretim Depo Yeri | Bileşenler için malzemenin tüketiminin yapılacağı depo yeri, yarı mamul ve mamuller için üretilip depoya konulacağı depo yeri anlamına gelir. | | 
+| Üretim Denetim Sorumlusu | Üretimden sorumlu olan üretim birimini temsil eder. | **001:** Production Control Group 1 <br> **002:** Planergruppe 2 | 
+| Üretim Denetim Profili | Üretim denetim parametrelerinin tanımlandığı profildir. <br> Proses/Üretim siparişlerinin oluşturulması ve onaylanması aşamalarındaki otomatik işlemlerin tanımlanması, malzeme girişleri, malzeme çekişleri, kullanılabilirlik kontrolü ile ilgili parametrelerin uyarlandığı üretim yöneltim profili girilir. | | 
+| Malzeme Grubu | Geçiş matrisi için kullanılan malzemelerin bir malzeme grubunda toplanmasını sağlar. | | 
+| Seri No Profili | Malzeme için seri numaraları kullanılacaksa sistemde önceden tanımlanacak olan seri numarası profilini malzeme ana verisine atamak gerekir.<br> Seri numarası profili, malzemelere seri numarası atanması sırasında kullanılacak olan şartları ve iş süreçlerini belirler. | | 
+| Seri Numarası Düzeyi | Seri numaraları için benzersizlik düzeyi girilir. | | 
+| Genel Profil | Sipariş değişiklik yönetimi için genel profil üretim siparişleri için değişiklik yönetimini kontrol eder. | | 
+| Kalite Kontrol Stoğuna Kaydet | Mal girişlerinin kalite kontrol statüsüne gerçekleşeceği işaretlenir. | |
+| Kritik Parça | Örnekleme yapılacak ise kritik parçaları temsil eder. | Aksi halde sadece bilgi amaçlı olarak kullanılır. | |
+| Versiyon Göstergesi | Malzemenin üretim versiyonu tanımlı olduğunda otomatik olarak işaretlenir. | |
+| Onaylanan Parti Günlüğü Gerekli | Parti versiyonunun onaylanması için sonuç girişi ve tahditli durumundan tahditsize alınması gerektiği durumlarda kullanılır. Sadece proses siparişlerinde kullanılır. | | 
+| Parti Girişi | Bileşenler için parti belirleme işleminin ne zaman yapılacağını gösteren alandır. <br> Üretim siparişi onay sırasında otomatik vb. | **0:** Mal çıkışı sırasında parti, teyit gerekli değil <br> **1:** Sipariş onayı sırasında manuel parti belirleme gerekli <br> **2:** Üretim/proses siparişinde parti gerekli değil, teyit gerekli <br> **3:** Sipariş onayı sırasında değişen otomatik parti belirleme | 
+| Parti Zorunluluğu | Parti yönetiminin zorunlu olduğunu gösterir. <br> Eğer mevcut dönemde ya da geçmiş dönemde malzeme stoğu varsa bu indikatör değiştirilemez. | | 
+
+---
+
+### :mag: İş Planlaması - Tolerans Verileri 
+
+| Alan Adı | Kullanım | Değer | 
+| :--- | :--- | :--- |
+| Teslimat Açığı için Tolerans Sınırı | Bir üretim siparişine, sipariş miktarının % kaçı kadar daha az mal girişi yapılabileceğini belirler. | | 
+| Teslimat Fazlası için Tolerans Sınırı | Bir üretim siparişine, sipariş miktarının yüzde kaçı kadar daha fazla mal girişi yapılabileceğini belirler. | | 
+| Sınırsız Teslimat Fazlası Olanaklı | Bir siparişe sınırsız mal girişi yapılabilmesini sağlar. | | 
+
+---
+
+### :mag: İş Planlaması - Gün Olarak Dahili Üretim Süresi 
+
+| Alan Adı | Kullanım | Değer | 
+| :--- | :--- | :--- |
+| Hazırlık Süresi | Temel seviyede terminleme yaparken kullanılan hazırlık süresidir. | |
+| İşl. Arası Süre | Bir sonraki işleme geçmek için gerekli işlemler arası süredir. <br> Temel seviyede terminleme yaparken kullanılır. (Planlı sipariş) | | 
+| Taban Miktarı | İşleme süresinde baz alınan miktardır. | 
+| Dahili Üretim Süresi | Bir malzemeyi üretmek için gereken süre tanımlanır. <br> Girilen süre üretim büyüklüğünden bağımsızdır. | | 
+
+---
+
+## :ledger: Tahmin Görünümü 
+
++ Tahmin görünümü **tüketim verilerini baz alarak** tahmin yürütmek için gerekli tanımlamaların yapılmasını sağlar.
+
++ Tüketim verisi genellikle stoktan çekme işlemleri ile güncellenir.
+
++ Malzemeler için tüketim verisi mal hareketinin uyarlamasına bağlı olarak her zaman güncellenir.
+
++ Toplam tüketim, **planlı** ve **plansız** tüketimlerin toplamı olarak hesaplanır.
+  + **Plansız tüketimler**, malzemenin hiçbir rezervasyon var olmadığında gerçekleşen tüketim hareketleri sonucu oluşur.
+
+---
+
+### :mag: Tahmin - Genel Veriler 
+
+| Alan Adı | Kullanım | Değer | 
+| :--- | :--- | :--- |
+| Temel Ölçü Birimi | Malzemenin stok tutulan ölçü birimini temsil eder. | |
+| Dönem Göstergesi | Tüketim değerlerinin hangi dönem bölümlemesi ile güncelleneceğini belirler. | **M:** Aylık <br> **W:** Haftalık <br> **T:** Günlük |
+| Tahmin Modeli | Çalıştırılacak yöntem belirlenir. <br> Tahmin modeli içerisinde formül barındırır ve geçmiş tüketim verisi ile formül içerisindeki düzeltme faktörleri, düzleme değerleri ile tahmin verisinin oluşturulması sağlanır. | **D:** Sabit <br> **K:** Uyarlama faktörü ayarlı sabit model <br> **T:** Trend <br> **S:** Sezonsal <br> **X:** Trend sezon modeli <br> **G:** Kayar ortalama değer <br> **W:** Ağırlıklandırılmış kayar ortalama <br> **O:** Uyarlama faktörü ayarlamalı 2. dereceden trend <br> **B:** 2. dereceden trend <br> **J:** Otomatik model seçimi | 
+| Mali Yıl Varyantı | Mali yılı tanımlayan mali yıl varyantı girilir. <br> Mali yıl içerisinde ne kadar kayıt dönemi olacağı belirtilir. | | 
+| Son Tahmin | Son tahmin çalışmasının ne zaman yapıldığını gösterir. | | 
+| Tüketim için Referans Malzeme | Tahminde bulunmak üzere, referans malzemenin tüketim istatistiğine tayinini belirler. | |
+| Tüketim için Referans Üretim Yeri | Tahminde bulunmak üzere, referans üretim yerindeki referans malzemenin tüketim istatistiğine tayinini belirler. | | 
+| Son Tarih | Referans malzeme için tahmine temel oluşturacak tüketim dönemini gösterir. | |
+| Çarpan | Tahmine temel oluşturacak referans malzemenin tüketim miktarını gösterir. | | 
+
+--- 
+
+### :mag: Tahmin - İstenen Dönem Sayısı 
+
+| Alan Adı | Kullanım | Değer | 
+| :--- | :--- | :--- |
+| Eski Dönemler | Tahmin modelinin ne kadar dönem geçmişe giderek çalışacağının belirtildiği alandır. | |
+| Tahmin Dönemleri | Tahmin için oluşturulacak dönem sayısını gösterir. <br> Haftalık veya aylık tahmin dönemleri belirlenebilir. | | 
+| Sezon Başına Dönem | Sezonun kaç dönem içereceğinin belirtildiği alandır. <br> Sezonsal tahmin modeli kullanıldığında geçerlidir. | | 
+| Sabit Dönemler | Tahmin sonucunun yeniden belirlenmesini gerektirmeyen dönem sayısını gösterir. | |
+| Bşl. Drm. Getirme dnm. | Başlangıç durumuna getirmek için kullanılacak dönem sayısı girilir. (Başlangıç durumuna getirme göstergesi kullanıldığında geçerlidir.) | | 
+
+---
+
+### :mag: Tahmin - Denetim Verileri 
+
+| Alan Adı | Kullanım | Değer | 
+| :--- | :--- | :--- |
+| Başlangıç Durumuna Getirme | Tahmin modeli için gerekli olan parametrelerin (yeniden) hesaplanmasını önler. | **X:** Sistem üzerinden başlangıç üzerine getirme <br> **M:** Manuel olarak başlangıç durumuna getirme | 
+| Kontrol Sınırı | Tahminin doğruluğunu denetler ve tahmin modelinin kontrol edilmesini sağlar. <br> Gerçek ile tahmin değerleri arasında olabilecek farkın yüzdesel olarak belirtildiği alandır. <br> Otomatik olarak ilk durum göstergesi seçili ise geçerlidir. | | 
+| Otm. Olarak İlk Durum | Kontrol sınırı aşıldığında tahmin modelinin otomatik olarak ilk duruma getirileceğini belirten göstergedir. | |
+| Model Seçimi | Tahmin modelinin otomatik olarak belirlenmesi sırasında model seçimini gösterir. | **T:** Trend incelemesi <br> **S:** Sezon incelemesi <br> **A:** Trend ve sezon incelemesi | 
+| Model Seçim Yöntemi | En uygun tahmin modelinin belirlenmesini denetler. | **1:** Anlamlılık testi ile model seçimi <br> **2:** Analitik model seçimi prosedürü|
+| Parametre Optimizasyonu | Söz konusu model için gerekli olan uyarlama faktörlerinin optimizasyonunu denetler. | | 
+| Optimizasyon Derecesi | Parametre optimizasyonunun doğruluğunu denetler. | **F:** Ayrıntılı (yüksek optimizasyon düzeyi) <br> **M:** Orta (orta optimizasyon düzeyi) <br> **G:** Kaba (düşük optimizasyon düzeyi) |
+| Düzeltme Faktörleri | Tahmin değerlerinin hesaplanmasında, tanımlanmış düzeltme faktörlerinin dikkate alınmasını denetler. | |
+| Temel dğr. Uyarlaması | Tahmin hesaplamasında kullanılacak temel değer faktörü olarak alfa faktörü (temel değer düzleme) girilir. Boş bırakıldığında sistem otomatik olarak 0,2 değerini alır. | 
+| Trend dğr. Düzenleme | Tahmin hesaplamasında kullanılacak temel değer faktörü olarak beta faktörü (temel değer düzleme) girilir. Boş bırakıldığında sistem otomatik olarak 0,1 değerini alır. |
+| Sez. Endeksi Düzleme | Tahmin hesaplamasında kullanılacak sezon indeksi olarak gama faktörü (temel değer düzleme) girilir. Boş bırakıldığında sistem otomatik olarak 0,3 değerini alır. | 
+| OMS Düzlemesi | Ortalama mutlak hata hesaplamasında delta faktörü (OMS düzlemesi) değeri girilir. Boş bırakıldığında sistem otomatik olarak 0,3 değerini alır. |
 
 --- 
 
