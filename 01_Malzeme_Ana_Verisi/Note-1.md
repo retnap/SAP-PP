@@ -95,6 +95,8 @@
 
 ## :ledger: Malzeme Ana Verisi - Sektör 
 
+<img width="709" height="317" alt="01_mm01-1" src="https://github.com/user-attachments/assets/b903b955-c453-48ca-9724-b13515cd3e32" />
+
 + Malzemenin sektöre tayin edilmesi, ekranları, ekranlarla ilgili sonuçları ve ekranlardaki sektöre özgü alanların gösterilmesine yardımcı olur.
 
 ## :ledger: Malzeme Ana Verisi - Malzeme Türü 
@@ -109,6 +111,8 @@
 
 ## :ledger: Malzeme Görünümleri 
 
+<img width="713" height="567" alt="02_mm01-2" src="https://github.com/user-attachments/assets/44b9e87c-112f-4e3f-a45d-e841d2de8034" />
+
 + Malzeme, tüm sistem içerisinde tek bir tanımlama içerir fakat organizasyon yapısı düzeyinde (örn. üretim yeri) farklı parametre değerlerine sahip olabilir.
 
 + Üretim planlama modülünün (PP) tanımladığı ve kullandığı malzeme görünümleri:
@@ -120,6 +124,8 @@
   + **Tahmin**
 
 ### :mag: Temel Veriler
+
+<img width="713" height="767" alt="03_temel-veriler-1" src="https://github.com/user-attachments/assets/e2fa6c7a-a9b2-4a37-bcaf-c9395de13cd3" />
 
 + Malzeme ana verisi temel veriler (1-2) görünümleri, malzemenin üst birimi (tüm şirketler) düzeyinde tanımlanır.
 
@@ -167,6 +173,8 @@
 
 ### :mag: MİP1 - Genel Veriler
 
+<img width="713" height="700" alt="04_mip-1" src="https://github.com/user-attachments/assets/307bc4d4-71a6-4ee8-bd42-534f66866307" />
+
 + Malzeme ana verisi; MİP1 görünümü malzeme ihtiyaç planlama şeklini, parti büyüklüğünü, mip sorumlusu ve malzeme ihtiyaç planlamasına yön veren parametrelerin gruplandığı mip grubu verilerini içermektedir.
 
 | Alan Adı | Kullanım | Değer |
@@ -212,6 +220,8 @@
 ---
 
 ### :mag: MİP2 - Tedarik 
+
+<img width="712" height="663" alt="05_mip-2" src="https://github.com/user-attachments/assets/6be9781f-5bff-4896-923a-de2110d7c883" />
 
 + MİP2 Görünümü genellikle malzemenin tedarik şeklini, terminlemeye etki eden değerleri ve emniyet stoğu ile ilgili parametreleri içerir.
 
@@ -259,6 +269,8 @@
 
 ### :mag: MİP3 - Tahmini İhtiyaçlar 
 
+<img width="712" height="687" alt="06_mip-3" src="https://github.com/user-attachments/assets/f5ce712e-495e-4c1b-af69-039f87f99208" />
+
 + MİP3 görünümü genellikle ön planlama stratejisi, mahsuplaşma tipi ve aralığı, kullanılabilirlik kontrolü parametrelerini içermektedir.
 
 | Alan Adı | Kullanım | Değer | 
@@ -305,6 +317,8 @@
 --- 
 
 ### :mag: MİP4 - Ürün Ağacı Açılımı / İkincil İhtiyaçlar 
+
+<img width="714" height="518" alt="07_mip-4" src="https://github.com/user-attachments/assets/38dcb4ec-d143-4d23-920c-470838457b66" />
 
 + MİP4 görünümü genellikle ürün ağacı/iş planı açılım şeklini, bağımlı ihtiyaçların aktarım şeklini (MTO/MTS), kesinti verilerini, seri üretim ve depo yeri ayrı planlaması durumunda tanımlanacak değerleri içermektedir.
 
@@ -355,6 +369,8 @@
 --- 
 
 ## :ledger: İş Planlaması Görünümü
+
+<img width="711" height="632" alt="09_is-planlama" src="https://github.com/user-attachments/assets/3d7da895-ef3e-42e8-89a8-d7a62d6ac0b0" />
 
 + İş Planlaması görünümü, üretim yürütümü ile ilgili verilen girilmesini sağlar.
 
@@ -409,6 +425,8 @@
 ---
 
 ## :ledger: Tahmin Görünümü 
+
+<img width="711" height="662" alt="08_tahmin" src="https://github.com/user-attachments/assets/56e0cab3-04e3-4f9e-a24c-56da9d4cddef" />
 
 + Tahmin görünümü **tüketim verilerini baz alarak** tahmin yürütmek için gerekli tanımlamaların yapılmasını sağlar.
 
