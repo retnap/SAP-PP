@@ -283,6 +283,76 @@
 | Dönüştürme Faktörü | Malzemenin TÖB ile planlama malzemesinin ölçü birimi arasında dönüşümü sağlayan oran belirtilir. | | 
 | Ön pln. mlz. temel öb. | Ön planlama malzemesinin ölçü birimi girilir. | | 
 
+---
+
+### :mag: MİP3 - Kullanılabilirlik Kontrolü 
+
+| Alan Adı | Kullanım | Değer | 
+| :--- | :--- | :--- |
+| Kullanılabilirlik Kontrolü | Malzemenin kullanılabilir miktar hesabı yapılırken bu hesaplamaya hangi değerlerin (satınalma siparişi, rezervasyonlar vb.) dahil edileceğini ve hesaplamanın hangi ihtiyaçlara yönelik olduğunu belirler. | **01:** Günlük İhtiyaç <br> **02:** Münferit İhtiyaç <br> **KP:** Kontrol yok | 
+| Toplam İkmal Süresi | Kullanılabilirlik kontrolünde dikkate alınacak süredir. <br> Malzemenin ne kadar zaman içinde tekrar kullanılabilir olduğunu belirtir.  | | 
+| Projeler Arası Malzeme İçin Gösterge | Proje stok segmentinde hesap tanımlı olmasa bile stok hareketlerinin dikkate alınmasını sağlayan alandır. | | 
+
+---
+
+### :mag: MİP3 - ÜY'ye Özgü Konfigürasyon 
+
+| Alan Adı | Kullanım | Değer | 
+| :--- | :--- | :--- |
+| Varyant | Malzemenin varyant malzeme olarak takip edildiğini belirtir. | | 
+| Konfigüre Edilebilir Malzeme | Varyant malzemenin kullanacağı konfigürasyon alt yapısının, hangi konfigüre malzemeye ait olduğunun tayininin yapıldığı alandır. | | 
+
+--- 
+
+### MİP4 - Ürün Ağacı Açılımı / İkincil İhtiyaçlar 
+
++ MİP4 görünümü genellikle ürün ağacı/iş planı açılım şeklini, bağımlı ihtiyaçların aktarım şeklini (MTO/MTS), kesinti verilerini, seri üretim ve depo yeri ayrı planlaması durumunda tanımlanacak değerleri içermektedir.
+
+| Alan Adı | Kullanım | Değer | 
+| :--- | :--- | :--- |
+| Alternatif Seçim | Alternatif ürün ağacı seçimlerinin MİP sırasında nasıl yapılacağı belirlenir. | **0:** Sipariş miktarına göre seçim <br> **1:** Açılım terminine göre seçim <br> **2:** Üretim versiyonuna göre seçim <br> **3:** Yalnızca üretim versiyonuna göre seçim | 
+| Münferit/Toplu | MİP'teki ikincil ihtiyaçların işlenmesini denetler. <br> Sipariş üzerine üretim söz konusu olduğunda önem taşır. <br> Münferit seçildiğinde sistem, malzemeye olan ihtiyaçları ihtiyaç kaynağı bazında ayıracaktır. <br> Toplu seçildiğinde sistem, malzemeye belli bir periyotta ihtiyaç duyulan miktarları toplayacak ve toplu olarak gösterecektir. | **0:** Münferit ve toplu ihtiyaç <br> **1:** Yalnızca münferit ihtiyaç <br> **2:** Yalnızca toplu ihtiyaç | 
+| İhtiyaç Gruplaması | Aynı güne düşen ikincil ihtiyaçların gruplanmasını sağlar. | **T:** İkincil ihtiyaçların günlük toplamlar halinde görüntülenmesi <br> **0:** Seri üretimde, toplam ihtiyaca ek olarak münferit ihtiyaç | 
+| Bileşen Iskartası (%) | Ürünün ağacındaki bileşenin üretim sarf edildiğinde ne kadarının ıskarta olacağı belirtilen alandır. | | 
+| Bağımlı ihyç. için MİP uyumlu | Bağımlı ihtiyaçların MİP 'e dahil olup olmadığını belirten alandır. | **0:** Bağlı ihtiyaçlar planlanıyor <br> **1:** Bağlı ihtiyaçlar planlaması | 
+| Versiyon Göstergesi | Malzemenin üretim versiyonu tanımlı olduğunda otomatik olarak işaretlenir. | | 
+
+--- 
+
+### MİP4 - Kesinti Denetimi 
+
+| Alan Adı | Kullanım | Değer | 
+| :--- | :--- | :--- |
+| Kesinti Göstergesi | Kesinti göstergesi konulan malzemelerde bu malzemenin yerine başka malzeme kullanılacağını gösterir. | **1:** Artık üretilmeyen tek/paralel ürün <br> **3:** Artık üretilemeyen bağlı paralel ürün | 
+| Sonraki Malzeme | Kullanıma son verilen malzemenin yerine geçecek olan malzemenin numarası bu alana girilir. | | 
+| Kesinti Tarihi | Malzeme kesin bir tarihten itibaren kullanılamayacaksa kesinti malzeme ile birlikte bu alan doldurulur. | | 
+
+---
+
+### MİP4 - Seri Üretim / Montaj / Yayılma Stratejisi 
+
+| Alan Adı | Kullanım | Değer | 
+| :--- | :--- | :--- |
+| Seri Üretim | Malzemenin üretim stratejisinin seri üretim olacağını belirleyen göstergedir. | | 
+| Seri Üretim Profili | Seri üretim için mali hareketleri, çekme hareketi ile ilgili parametreleri, maliyetlendirme stratejileri gibi değerlerin uyarlamasını içinde barındıran değerlerdir. | |
+| İşlem Denetimi | Planlı siparişler için işlev denetimlerinin hangi sırayla gerçekleşeceği belirtilir. | | 
+| Eşit Paylaşım Kuralı | Talebin tedarikleri aştığı durumda dağıtım kaynakları planlamasının adil dağıtım yapacağı mip ögeleri belirtilir. | | 
+| Push Dağıtımı | Toplam tedarik ögelerinin ihtiyaçları karşıladıktan sonr artan stok için davranışı belirtilir. | | 
+| Teklif Süresi | Dağıtım kaynaklarının planlamasında gün sayısı olarak dağıtım yapılacak miktarın hesaplanmasında kullanılır. | |
+| Ortalama Üretim Yeri Stoğu | Uzun dönemli planlama için ortalam üretim yeri stoğunun hesaplanmasını sağlar. | | 
+
+---
+
+### MİP4 - Depo Yeri Planlaması 
+
+| Alan Adı | Kullanım | Değer | 
+| :--- | :--- | :--- |
+| MİP Göstergesi | Depo yeri bazında ayrı malzeme ihtiyaç planlaması için kullanılır. | | 
+| DY Özel Tedarik Türü | Depo yeri bazında özel tedarik türünün belirlendiği alandır. | |
+| Yeniden Sipariş Seviyesi | Depo yeri bazında yeniden sipariş seviyesinin belirlendiği alandır. | | 
+| İkmal Miktarı | Depo yeri bazında tedarik miktarının belirlendiği alandır. | | 
+
+--- 
 
 
 
